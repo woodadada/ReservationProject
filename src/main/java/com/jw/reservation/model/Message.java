@@ -1,4 +1,4 @@
-package com.jw.practice.model;
+package com.jw.reservation.model;
 
 import com.jw.reservation.constants.StatusCodeConst;
 

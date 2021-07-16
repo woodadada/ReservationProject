@@ -17,9 +17,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jw.practice.model.Message;
 import com.jw.reservation.constants.StatusCodeConst;
 import com.jw.reservation.form.ReservationForm;
+import com.jw.reservation.model.Message;
 import com.jw.reservation.model.Reservation;
 import com.jw.reservation.service.ReservationService;
 

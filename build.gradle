@@ -22,7 +22,7 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16'
-	compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+	//compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
@@ -31,6 +31,8 @@ dependencies {
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
     implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
+    implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
+	implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
 }
 
 test {
