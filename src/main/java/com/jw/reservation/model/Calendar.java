@@ -1,5 +1,6 @@
 package com.jw.reservation.model;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 import lombok.Data;
@@ -7,24 +8,16 @@ import lombok.Data;
 @Data
 public class Calendar {
 	
-	// ÀÏÀÚ
+	// ì¼ì
 	private Date de;
-	// ³â¿ùÀÏ
-	private String ymd;
-	// ¿¬µµ
-	private Integer yr;
-	// ¿ù
-	private Integer mt;
-	// ÀÏ
-	private Integer dy;
-	// ¿äÀÏ
+	// ìš”ì¼
 	private Integer dwk;
-	// ÈŞÀÏ¿©ºÎ
+	// íœ´ì¼ì—¬ë¶€
 	private String hoilYn;
-	// ¸íÀı´çÀÏ ¿©ºÎ
+	// ëª…ì ˆ ë‹¹ì¼ ì—¬ë¶€
 	private String hldyYn;
-	// ºñ°í
+	// ë¹„ê³ 
 	private String note;
-	// µî·Ï ÀÏ½Ã
-	private Date regDt;
+	// ì¼ì‹œ
+	private Timestamp regDt;
 }

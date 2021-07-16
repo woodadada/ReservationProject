@@ -1,32 +1,41 @@
 package com.jw.reservation.model;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 import lombok.Data;
 
 @Data
 public class Reservation {
 	
-	// ¿¹¾à ½Äº°¹øÈ£
+	// ì˜ˆì•½ ì‹ë³„ ë²ˆí˜¸
 	private Long resId;
-	// È¯ÀÚ ½Äº°¹øÈ£
+	// í™˜ì ì‹ë³„ ë²ˆí˜¸
 	private Long mbrId;
-	// ÀÇ»ç ½Äº°¹øÈ£
+	// ì˜ì‚¬ ì‹ë³„ ë²ˆí˜¸
 	private Long docId;
 	
-	// Áø·áÀÏ
-	private Date resDt;
-	// Áø·á ½ÃÀÛ ÀÏ½Ã
-	private Date resStDt;
-	// Áø·á »ç¿ë ½Ã°£
-	private Date resMt;
-	// Áø·á ¸¶°¨ ÀÏ½Ã
-	private Date resEndDt;
+	// ì§„ë£Œì¼
+	private Timestamp revDt;
+	// ì§„ë£Œ ì‹œì‘ ì‹œê°„
+	private Timestamp revStDt;
+	// ì§„ë£Œ ì‚¬ìš© ì‹œê°„
+	private String revMt;
+	// ì§„ë£Œ ë§ˆê° ì‹œê°„
+	private Timestamp revEndDt;
 	
-	// »èÁ¦ ¿©ºÎ
+	// ì‚­ì œ ì—¬ë¶€
 	private String delYn;
-	// µî·Ï ÀÏ½Ã
-	private Date regDt;
-	// ¼öÁ¤ ÀÏ½Ã
-	private Date modDt;
+	// ë“±ë¡ ì¼ì‹œ
+	private Timestamp regDt;
+	// ìˆ˜ì • ì¼ì‹œ
+	private Timestamp modDt;
+	
+	// ì˜ì‚¬ ì´ë¦„
+	private String docNm;
+	// ì˜ì‚¬ ì§„ë£Œ ì½”ë“œ
+	private String docCd;
+	// í™˜ì ì´ë¦„
+	private String mbrNm;
+	// í™˜ì ì „í™”ë²ˆí˜¸
+	private String mbrCpNo;
 }

@@ -32,9 +32,11 @@ public class SampleController implements ApplicationRunner {
 
     @Autowired
     JdbcTemplate jdbcTemplate;
-
+    
     @Override
     public void run(ApplicationArguments args) throws Exception {
+    	
+//    	CodeConst.DOCTOR_TP_CD_MEDICINE.toString();
 
         // DataSource
         Connection connection = dataSource.getConnection();

@@ -1,5 +1,6 @@
 package com.jw.reservation.model;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 import lombok.Data;
@@ -7,22 +8,22 @@ import lombok.Data;
 @Data
 public class OperatingHours {
 	
-	// ¿î¿µ½Ã°£ ½Äº°¹øÈ£
+	// ì§„ë£Œ ì‹œê°„ ì‹ë³„ ë²ˆí˜¸
 	private Long opeId;
-	// Áø·á ½ÃÀÛ½Ã°£
+	// ì§„ë£Œ ì‹œì‘ ì‹œê°„
 	private Date cncStDt;
-	// Áø·á ¸¶°¨½Ã°£
+	// ì§„ë£Œ ë§ˆê° ì‹œê°„
 	private Date cncEndDt;
-	// Á¡½É ½ÃÀÛ½Ã°£
+	// ì ì‹¬ ì‹œì‘ ì‹œê°„
 	private Date lucStDt;
-	// Á¡½É ¸¶°¨½Ã°£
+	// ì ì‹¬ ë§ˆê° ì‹œê°„
 	private Date lucEndDt;
-	// ³¯Â¥ ±¸ºĞ ÄÚµå
+	// ë‚ ì§œ êµ¬ë¶„ ì½”ë“œ
 	private String dayCd;
-	// ³¯Â¥ ±¸ºĞ ÄÚµå ¸í
+	// ë‚ ì§œ êµ¬ë¶„ ëª…
 	private String dayCdNm;
-	// µî·Ï ÀÏ½Ã
-	private Date regDt;
-	// ¼öÁ¤ ÀÏ½Ã
-	private Date modDt;
+	// ë“±ë¡ ì¼ì‹œ
+	private Timestamp regDt;
+	// ìˆ˜ì • ì¼ì‹œ
+	private Timestamp modDt;
 }

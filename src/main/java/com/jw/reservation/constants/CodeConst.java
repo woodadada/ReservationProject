@@ -7,6 +7,11 @@ package com.jw.reservation.constants;
  */
 public enum CodeConst {
 	
+	/**삭제 여부*/
+	BOOLEAN_TRUE("Y"),
+	/**삭제 여부*/
+	BOOLEAN_FALSE("N"),
+
 	/** 운영시간 타입 코드 */
 	OPERATING_TP_CD_GRP("OPE001"),
 	/** 운영 시간 타입 코드 : 평일(OPE001001) */

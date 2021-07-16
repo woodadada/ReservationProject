@@ -1,24 +1,24 @@
 package com.jw.reservation.model;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 import lombok.Data;
 
 @Data
 public class Doctor {
 	
-	// ÀÇ»ç ½Äº°¹øÈ£
+	// ì˜ì‚¬ ì‹ë³„ë²ˆí˜¸
 	private Long docId;
-	// ÀÇ»ç ÀÌ¸§
+	// ì˜ì‚¬ ì´ë¦„
 	private String docNm;
-	// ÀÇ»ç Áø·á Å¸ÀÔ
-	private String docTpCd;
-	// ÀÇ»ç Áø·á Å¸ÀÔ ¸í
-	private String docTpCdNm;
-	// »èÁ¦ ¿©ºÎ
+	// ì˜ì‚¬ ì§„ë£Œ ì½”ë“œ
+	private String docCd;
+	// ì˜ì‚¬ ì§„ë£Œ ì½”ë“œ ëª… 
+	private String docCdNm;
+	// ì‚­ì œ ì—¬ë¶€
 	private String delYn;
-	// µî·Ï ÀÏ½Ã
-	private Date regDt;
-	// ¼öÁ¤ ÀÏ½Ã
-	private Date modDt;
+	// ë“±ë¡ ì¼ì‹œ
+	private Timestamp regDt;
+	// ìˆ˜ì • ì¼ì‹œ
+	private Timestamp modDt;
 }

@@ -1,22 +1,22 @@
 package com.jw.reservation.model;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 import lombok.Data;
 
 @Data
 public class Holiday {
 	
-	// ÈŞ¹«ÀÏ ½Äº°¹øÈ£
+	// íœ´ë¬´ì¼ ì‹ë³„ë²ˆí˜¸
 	private Long holiId;
-	// ÀÇ»ç ½Äº°¹øÈ£
+	// ì˜ì‚¬ ì‹ë³„ë²ˆí˜¸
 	private Long docId;
-	// ÈŞ¹«ÀÏ
-	private Date holiDt;
-	// »èÁ¦ ¿©ºÎ
+	// íœ´ë¬´ì¼
+	private Timestamp holiDt;
+	// ì‚­ì œ ì—¬ë¶€
 	private String delYn;
-	// µî·Ï ÀÏ½Ã
-	private Date regDt;
-	// ¼öÁ¤ ÀÏ½Ã
-	private Date modDt;
+	// ë“±ë¡ ì¼ì‹œ
+	private Timestamp regDt;
+	// ìˆ˜ì • ì¼ì‹œ
+	private Timestamp modDt;
 }

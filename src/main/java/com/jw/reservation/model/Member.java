@@ -1,20 +1,20 @@
 package com.jw.reservation.model;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 import lombok.Data;
 
 @Data
 public class Member {
 	
-	// È¯ÀÚ ½Äº°¹øÈ£
+	// í™˜ì ì‹ë³„ë²ˆí˜¸
 	private Long mbrId;
-	// È¯ÀÚ ÀÌ¸§
+	// í™˜ì ì´ë¦„
 	private String mbrNm;
-	// È¯ÀÚ ÀüÈ­¹øÈ£
+	// í™˜ì ì „í™”ë²ˆí˜¸
 	private String mbrCpNo;
-	// µî·Ï ÀÏ½Ã
-	private Date regDt;
-	// ¼öÁ¤ ÀÏ½Ã
-	private Date modDt;
+	// ë“±ë¡ ì¼ì‹œ
+	private Timestamp regDt;
+	// ìˆ˜ì • ì¼ì‹œ
+	private Timestamp modDt;
 }
