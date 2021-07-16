@@ -44,10 +44,18 @@ public class ReservationService {
 		rf.setRevEndDt(reservation.getRevEndDt());
 		List<Reservation> list = this.getList(rf);
 		
+		/**
+		 * 진료 시간, 진료 과목이 겹치더라도 해당 진료 과목 의사가 여러명 일 수 있으므로 검사
+		 * 시간,과목이 겹친다면 list가 리턴
+		 * return list에 해당 예약 의사 식별 번호
+		 * 해당 예약 의사 식별번호를 외의 진료 과목 의사 예약 검사, 휴무일 검사
+		 * 문제 없다면 예약 insert
+		 */
+		
 		// 진료 시간, 진료 과목이 겹치지 않아 등록 가능
-		if(list.isEmpty() && list.size() == 0) {
-			// 해당 진료 코드 의사가 휴무가 아닌지 검사
-		}
+//		if(list.isEmpty() && list.size() == 0) {
+//			// 해당 진료 코드 의사가 휴무가 아닌지 검사
+//		}
 		
 		return reservationDao.insert(reservation);
 	}
