@@ -26,15 +26,6 @@ public class DoctorService {
 		Doctor doctor = new Doctor();
 		doctor.setDocId(docId);
 		doctor.setDelYn(CodeConst.BOOLEAN_TRUE.getValue());
-		try {
-			Integer flag = doctorDao.modify(doctor);
-			// 의사 삭제 성공 시 해당 의사 예약 삭제 처리
-			if(flag > 0) {
-				
-			}
-		} catch (Exception e) {
-			
-		}
 		
 		return doctorDao.modify(doctor);
 	}

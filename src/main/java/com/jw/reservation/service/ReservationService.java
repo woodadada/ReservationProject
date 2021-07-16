@@ -1,11 +1,11 @@
 package com.jw.reservation.service;
 
-import java.sql.Timestamp;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.jw.reservation.constants.CodeConst;
 import com.jw.reservation.form.ReservationForm;
 import com.jw.reservation.model.Reservation;
 import com.jw.reservation.repository.ReservationDao;
@@ -74,8 +74,12 @@ public class ReservationService {
 	 * @param reservation
 	 * @return
 	 */
-	public Integer deleteReservation(Reservation reservation) {
-		return reservationDao.modify(reservation);
+	public Integer deleteReservation(Long resId) {
+		Reservation res = new Reservation();
+		res.setResId(resId);
+		res.setDelYn(CodeConst.BOOLEAN_TRUE.getValue());
+		
+		return reservationDao.modify(res);
 	}
 	
 	/**

@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -91,9 +92,8 @@ public class ReservationRestController {
 	}
 	
 	/**
-	 * 
-	 * @param docId
-	 * @param date
+	 * 예약 등록
+	 * @param reservation
 	 * @return
 	 */
 	@PostMapping("")
@@ -127,19 +127,24 @@ public class ReservationRestController {
 //		}		
 //	}
 //	
-//	@DeleteMapping("/{id}")
-//	public ResponseEntity<Message> deleteDoctor(@PathVariable Long id){
-//		
-//		Integer flag = doctorService.deleteDoctor(id);
-//		
-//		Message ms = new Message();
-//		
-//		if(flag > 0) {
-//			ms.setStatus(StatusCodeConst.OK);
-//			return new ResponseEntity<Message>(ms, HttpStatus.OK);
-//		}else {
-//			ms.setStatus(StatusCodeConst.NOT_FOUND);
-//			return new ResponseEntity<Message>(ms, HttpStatus.NOT_FOUND);
-//		}		
-//	}
+	/**
+	 * 예약 삭제 처리
+	 * @param id
+	 * @return
+	 */
+	@DeleteMapping("/{id}")
+	public ResponseEntity<Message> deleteReservation(@PathVariable Long id){
+		
+		Integer flag = reservationService.deleteReservation(id);
+		
+		Message ms = new Message();
+		
+		if(flag > 0) {
+			ms.setStatus(StatusCodeConst.OK);
+			return new ResponseEntity<Message>(ms, HttpStatus.OK);
+		}else {
+			ms.setStatus(StatusCodeConst.NOT_FOUND);
+			return new ResponseEntity<Message>(ms, HttpStatus.NOT_FOUND);
+		}		
+	}
 }

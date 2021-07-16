@@ -58,12 +58,19 @@
 		ORDER BY REV_DT
     </select>
 
-    <insert id="insert" parameterType="Doctor">
+    <insert id="insert" parameterType="Reservation">
       
     </insert>
     
-    <update id="modify" parameterType="Doctor">
-      
+    <update id="modify" parameterType="Reservation">
+      UPDATE RE_RES
+      <set>
+      	<if test="delYn != null"> 
+   			DEL_YN = #{delYn},
+		</if>
+      </set>
+      WHERE 
+      		RES_ID = #{resId}
     </update>
 
 </mapper>
